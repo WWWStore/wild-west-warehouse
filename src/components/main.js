@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './home';
 import Category from './category';
 import Product from './product';
-import Login from './authentication';
+import Login from './login';
 import Signup from './signup';
 import About from './about';
 import Wagon from './wagon';
