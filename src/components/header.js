@@ -8,7 +8,7 @@ export default function Header() {
       <ul>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/login">Login</Link></li>
-        <li><Link to="/wagon"><img src="https://via.placeholder.com/50x50.jpg"></img></Link></li>
+        <li><Link to="/wagon"><img src="https://via.placeholder.com/50x50.jpg" alt="Wagon Icon"></img></Link></li>
       </ul>
     </div>
   )
