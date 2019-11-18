@@ -1,10 +1,17 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { BrowserRouter } from 'react-router-dom';
+
+import Main from './components/main';
+
 import './App.css';
-import Home from './components/home'
 
 function App() {
   return (
-    <Home />
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
   );
 }
 
