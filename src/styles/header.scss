@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  * {
+    box-sizing: border-box;
+  }
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+li {
+  box-sizing: border-box;
+}
+
+// .cart-logo {
+// }
+
+.header-nav {
+  list-style-type: none;
+  display: flex;
+  flex: 0.2;
+  justify-content: space-between;
+  align-content: flex-start;
+}
