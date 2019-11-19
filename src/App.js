@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Main from './components/main';
 
-import './App.css';
+import './styles/App.scss';
 
 function App() {
   return (
