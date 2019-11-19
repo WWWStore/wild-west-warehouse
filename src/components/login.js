@@ -1,8 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+import base64 from 'base-64';
+import { Link } from 'react-router-dom';
+
+const superagent = require('superagent');
+require('cors');
+require('../styles/login.css');
 
 export default function Login() {
+  const [username, setUsername] = useState(null);
+  const [password, setPassword] = useState(null);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    superagent.get('https://wwwshop.herokuapp.com/signin')
+      .set('authorization', `Basic ${base64.encode(`${username}:${password}`)}`)
+      .then(res => {
+        console.log(res.text);
+      });
+  }
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  }
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  }
+
   return (
     <>
+    <div className="login">
+      <form onSubmit={handleSubmit}>
+        <label>Username</label>
+        <input type="text" onChange={handleUsernameChange}></input>
+
+        <label>Password</label>
+        <input type="text" onChange={handlePasswordChange}></input>
+
+        <input type="submit" value="Submit"></input>
+      </form>
+    </div>
+    <p>Don't have an account?</p><Link to="/signup">Sign up</Link>
     </>
   )
 };
