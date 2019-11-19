@@ -34,7 +34,7 @@ export default function Header() {
         <ul className="header-nav">
           <li><Link to="/about">About</Link></li>
           <li><Link to="/login">Login</Link></li>
-          <li><Link to="/wagon"><img className="cart-logo" src="https://via.placeholder.com/50x50.jpg" alt="Wagon Logo"/></Link></li>
+          <li><Link to="/wagon"><img className="cart-logo" src={require('../assets/wagonicon.png')} alt="Wagon Logo"/></Link></li>
         </ul>
       </header>
     )
