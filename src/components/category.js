@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import superagent from 'superagent';
 
 export default function Category(props) {
   let [category, setCategory] = useState({});
+  const { slug } = props.match.params;
 
-  const componentDidMount = () => {
-    const { category } = props.match.params
+  useEffect(() => {
 
-    return superagent
-      .get(`https://dashboard.heroku.com/apps/wwwshop/category/${category}`)
+    superagent
+      .get(`https://wwwshop.herokuapp.com/categories/${slug}`)
       .then(res => {
         setCategory(res);
       })
-  }
+  }, [slug])
 
   return (
     <>
-      <h1>{category}</h1>
+      <h1>{slug}</h1>
     </>
   )
 };
