@@ -40,7 +40,8 @@ export default function Login() {
         <input type="submit" value="Submit"></input>
       </form>
     </div>
-    <p>Don't have an account?</p><Link to="/signup">Sign up</Link>
+    <div className="signup">
+    <p>Don't have an account?</p><Link to="/signup">Sign up</Link></div>
     </>
   )
 };
