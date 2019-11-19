@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import superagent from 'superagent';
 
 export default function Category(props) {
-  let [products, setProducts] = useState([])
+  let [products, setProducts] = useState(null)
   console.log(products)
   const { slug } = props.match.params;
 
@@ -15,6 +15,14 @@ export default function Category(props) {
         setProducts(categorized);
       })
   }, [slug])
+
+  if (!products) {
+    return (
+      <>
+        Loading...
+      </>
+    )
+  }
 
   return (
     <>
