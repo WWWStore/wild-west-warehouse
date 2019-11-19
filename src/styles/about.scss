@@ -1,0 +1,24 @@
+h2{
+  margin-top: 5px;
+  text-align: center;
+  margin: 5px;
+}
+
+.about {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+  }
+  img {
+  border: 2px black solid;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+}
