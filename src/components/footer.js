@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
     <footer>
-      <section class="footer">
+      <section className="footer">
         <p>&copy;2019 DeltaV Code</p>
       </section>
     </footer>
