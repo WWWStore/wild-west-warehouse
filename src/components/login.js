@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import base64 from 'base-64';
+import { Link } from 'react-router-dom';
 
 const superagent = require('superagent');
 require('cors');
@@ -27,6 +28,7 @@ export default function Login() {
   }
 
   return (
+    <>
     <div className="login">
       <form onSubmit={handleSubmit}>
         <label>Username</label>
@@ -38,5 +40,7 @@ export default function Login() {
         <input type="submit" value="Submit"></input>
       </form>
     </div>
+    <p>Don't have an account?</p><Link to="/signup">Sign up</Link>
+    </>
   )
 };
