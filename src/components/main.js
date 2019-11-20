@@ -11,7 +11,7 @@ import About from './about';
 import Wagon from './wagon';
 import Footer from './footer';
 
-import '../styles/index.scss';
+import '../styles/main.scss';
 
 export default function Main(props) {
   return (
