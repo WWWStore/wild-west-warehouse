@@ -4,9 +4,9 @@ import superagent from 'superagent';
 
 export default function Details(props) {
 
-  const addToWagon = () => {
+  const addToWagon = () => (
     (`https://wwwshop.herokuapp.com/products/${id}/save`)
-  }
+  )
 
   let [details, setDetails] = useState(null);
   let { id } = props.match.params;
