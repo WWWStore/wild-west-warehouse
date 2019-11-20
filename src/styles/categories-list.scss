@@ -3,6 +3,7 @@
     a {
       text-decoration: none;
       color: black;
+      font-size: 1.9rem;
     }
     display: none;
     width: 100%;
@@ -11,10 +12,14 @@
     color: rgba(75, 75, 75, .7);
     background-color: rgba(75, 75, 75, .3);
   }
-  max-width: 450px;
-  background-color: lightGrey;
+  font-size: 2.1rem;
+  max-width: 200px;
+  background-color: #c3976a;
   text-align: center;
   transition: display 2s ease-in;
+  border-radius: 10px;
+  margin-left: 45px;
+  margin-top: 15px;
 }
 .categories-list:hover {
   li {
