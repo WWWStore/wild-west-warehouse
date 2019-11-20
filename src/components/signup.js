@@ -17,7 +17,7 @@ export default function Signup() {
           "password": password
       })
         .then(res => {
-          console.log(res);
+          //console.log(res);
         })
     } else {
       alert('Password fields must match');
@@ -57,7 +57,8 @@ export default function Signup() {
         <input type="submit" value="Submit" disabled></input>
       </form>
     </div>
-    <p>Already have an account?</p><Link to="/login">Log in</Link>
+    <div className="signup">
+    <p>Already have an account?</p><Link to="/login">Log in</Link></div>
     </>
   )
 };

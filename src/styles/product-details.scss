@@ -1,0 +1,33 @@
+.details{
+  font-size: 1.3rem;
+  bottom: 0;
+  width: 50%;
+  border: #924a36 5px solid;
+  margin: 15px auto;
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgba(50,50,50,.3);
+  box-shadow: 5px 5px 10px grey;
+  img{
+    border: 5px #924a36 solid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px grey;
+  }
+  .click{
+    margin: 15px auto;
+    padding: 15px auto;
+
+    input{
+      width: 100px;
+    }
+    button{
+      width: 100px;
+      background-color: #924a36;
+      border: 2px solid;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      margin: 5px;
+    }
+  }
+}

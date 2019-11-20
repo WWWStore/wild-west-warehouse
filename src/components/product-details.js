@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import superagent from 'superagent';
 
+import '../styles/product-details.scss'
+
 
 export default function Details(props) {
 
@@ -30,7 +32,7 @@ export default function Details(props) {
 
   return (
     <>
-      <div className="product-details">
+      <div className="details">
         <h3>{details.name}</h3>
         <p>{details.description}</p>
         <img src={details.image_url} width={200} alt={details.name}/>
