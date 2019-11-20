@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const superagent = require('superagent');
 require('cors');
-require('../styles/login.css');
+require('../styles/login.scss');
 
 export default function Login() {
   const [username, setUsername] = useState(null);
