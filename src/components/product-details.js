@@ -4,13 +4,14 @@ import superagent from 'superagent';
 
 export default function Details(props) {
 
-  const addToWagon = () => (
-    (`https://wwwshop.herokuapp.com/products/${id}/save`)
-  )
-
   let [details, setDetails] = useState(null);
   let { id } = props.match.params;
   
+  const addToWagon = () => (
+    superagent
+      .post(`https://wwwshop.herokuapp.com/products/${details._id}/save`)
+  )
+
   useEffect(() => {
     superagent
       .get(`https://wwwshop.herokuapp.com/products/${id}`)
@@ -22,20 +23,22 @@ export default function Details(props) {
   if (!details) {
     return (
       <>
-        Details...
+        Loading...
       </>
     )
   }
 
   return (
     <>
-      <h3>{details.name}</h3>
-      <h4>${details.price}</h4>
-      <img src={details.image_url} width={200} alt={details.name}/>
-      <p>{details.description}</p>
-      <h6>Keywords: {details.keywords.toString()}</h6>
-       <input type="number" placeholder="0" max={15}></input>
-      <button onClick={addToWagon}>Add to your Wagon</button> 
+      <div className="product-details">
+        <h3>{details.name}</h3>
+        <p>{details.description}</p>
+        <img src={details.image_url} width={200} alt={details.name}/>
+        <h4>${details.price}</h4>
+        <h6>Keywords: {details.keywords.toString()}</h6>
+        <input type="number" placeholder="0" min={0} max={15}></input>
+        <button onClick={addToWagon}>Add to your Wagon</button>
+      </div>
     </>
   )
 };
