@@ -1,0 +1,31 @@
+.details{
+  font-size: 1.3rem;
+  bottom: 0;
+  width: 50%;
+  border: rgba(75, 75, 75, .6) 5px solid;
+  margin: 15px auto;
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgba(50,50,50,.3);
+  box-shadow: 5px 5px 10px grey;
+  img{
+    border: 5px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px grey;
+  }
+  .click{
+    margin: 15px auto;
+    padding: 15px auto;
+
+    input{
+      width: 100px;
+    }
+    button{
+      width: 100px;
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+      margin: 5px;
+    }
+  }
+}
