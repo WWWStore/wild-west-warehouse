@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-require('../styles/login.css');
+require('../styles/login.scss');
 const superagent = require('superagent');
 
 export default function Signup() {
