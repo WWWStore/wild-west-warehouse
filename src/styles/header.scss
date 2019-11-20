@@ -1,25 +1,40 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   * {
     box-sizing: border-box;
   }
+  li {
+    a {
+      text-decoration: none;
+      color: black;
+      border: 1px solid rgba(75, 75, 75, .3);
+      padding: 3px 16px 3px 16px;
+      background-color: rgba(75, 75, 75, .1);
+      border-radius: 5px;
+    }
+  }
+  li:last-of-type {
+    a {
+      img {
+        align-items: center;
+      }
+      display: flex;
+      padding: 0 15px 0 15px;
+    }
+  }
+  li:hover {
+    a {
+      background-color: rgba(75, 75, 75, .3);
+    }
+  }
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border-bottom: 1px solid rgba(75, 75, 75, .5);
   box-sizing: border-box;
-  
-}
-
-.header-nav li {
-  margin-left: 20px;
+  background-color: #e3ce96;
 }
 
 .www-logo {
-  margin-top:5px;
+  margin-top: 5px;
   width: 175px;
   height: 100px;
   margin-left: 5px;
@@ -31,18 +46,22 @@
 }
 
 .header-nav {
+  li {
+    margin-left: 15px;
+  }
   list-style-type: none;
   display: flex;
   flex: 0.2;
   justify-content: flex-end;
   align-content: flex-start;
   align-items: center;
+  margin-right: 15px;
 }
 
 .hamburger {
   width: 40px;
   height: 40px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .hidden {
