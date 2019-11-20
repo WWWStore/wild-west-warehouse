@@ -1,0 +1,22 @@
+.products-list {
+  li {
+    h4 {
+      font-weight: normal;
+    }
+    img {
+      max-width: 300px;
+      max-height: 250px;
+      border-radius: 15px;
+    }
+    background-color: rgba(75, 75, 75, .2);
+    margin: 30px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 5px 5px 10px grey;
+  }
+  flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
