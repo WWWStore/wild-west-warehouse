@@ -1,5 +1,7 @@
 .login {
-  border: 1px solid black;
+  border: 5px#924a36 solid;
+  box-shadow: 5px 5px 10px grey;
+  border-radius: 15px;
   padding: 20px 0;
   width: 200px;
   margin: 50px auto;
@@ -10,13 +12,38 @@
 
 .login form label {
   margin: 10px;
+  width: 100%;
+  border: 2px #fff solid;
+  background-color: #924a36;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .login form input {
+  font-size: 16px;
   display: block;
+  width: 100%;
+  border: 2px#924a36 solid;
+  background-color: bisque;
   margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .signup{
   margin-top: 10px;
   text-align: center;
   margin-bottom: 30px;
+}
+.submitbutton{
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login:hover{
+  background-color: rgba(75, 75, 75, .4);
+  color: #fff;
+}
+.login form input:hover{
+  background-color: rgba(75, 75, 75, .4);
+  color: #fff;
 }

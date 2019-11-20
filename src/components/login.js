@@ -36,8 +36,8 @@ export default function Login() {
 
         <label>Password</label>
         <input type="text" onChange={handlePasswordChange}></input>
-
-        <input type="submit" value="Submit"></input>
+        <div className="submitbutton">
+        <input type="submit" value="Submit"></input></div>
       </form>
     </div>
     <div className="signup">
