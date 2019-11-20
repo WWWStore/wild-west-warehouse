@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import base64 from 'base-64';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../authContext';
 
 const superagent = require('superagent');
 require('cors');
@@ -9,13 +10,14 @@ require('../styles/login.scss');
 export default function Login() {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
+  const authenticatedUser = useContext(AuthContext);
 
   const handleSubmit = e => {
     e.preventDefault();
     superagent.get('https://wwwshop.herokuapp.com/signin')
       .set('authorization', `Basic ${base64.encode(`${username}:${password}`)}`)
       .then(res => {
-        console.log(res.text);
+        authenticatedUser.changeUser(res.text);
       });
   }
 
@@ -41,7 +43,9 @@ export default function Login() {
       </form>
     </div>
     <div className="signup">
-    <p>Don't have an account?</p><Link to="/signup">Sign up</Link></div>
+    <p>Don't have an account?</p><Link to="/signup">Sign up</Link>
+    </div>
+    <p>{ authenticatedUser.username }</p>
     </>
   )
 };

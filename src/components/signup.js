@@ -17,7 +17,7 @@ export default function Signup() {
           "password": password
       })
         .then(res => {
-          console.log(res);
+          //console.log(res);
         })
     } else {
       alert('Password fields must match');
