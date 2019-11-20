@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import superagent from 'superagent';
 
+import '../styles/products-list.scss';
+
 export default function Category(props) {
   let [products, setProducts] = useState(null)
   console.log(products)
@@ -26,12 +28,13 @@ export default function Category(props) {
 
   return (
     <>
-      <ul>
+      <ul className="products-list">
         {
           products.map(product => (
             <li key={product._id}>
-              <h3>{product.name}</h3>
-              <img src={product.image_url} alt={`${product.name}`} width={200} />
+              <h4 className="product-name">{product.name}</h4>
+              <img className="product-image" src={product.image_url}/>
+              <h5 className="product-price">${product.price}</h5>
             </li>
           ))
         }

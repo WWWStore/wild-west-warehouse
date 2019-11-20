@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import '../styles/categories-list.scss';
+
 export default function CategoriesList() {
   return (
-    <ul>
+    <ul className="categories-list">
+      Select Category
       <li><Link to='/products'>All Products</Link></li>
       <li><Link to='/categories/beverages'>Beverages</Link></li>
       <li><Link to='/categories/firearms'>Firearms</Link></li>
