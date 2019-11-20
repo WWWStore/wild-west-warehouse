@@ -9,6 +9,7 @@ import Login from './login';
 import Signup from './signup';
 import About from './about';
 import Wagon from './wagon';
+import ProductDetails from './product-details';
 
 export default function Main(props) {
   return (
@@ -18,7 +19,8 @@ export default function Main(props) {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/categories/:slug' component={Category} />
-          <Route path='/products' component={Product} />
+          <Route exact path='/products' component={Product} />
+          <Route path='/products/:id' component={ProductDetails} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/about' component={About} />
