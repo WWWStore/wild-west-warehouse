@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import superagent from 'superagent';
+import Footer from './footer';
 
 import '../styles/products-list.scss';
 
@@ -36,6 +37,7 @@ export default function Product(props) {
           ))
         }
       </ul>
+      <Footer />
     </>
   )
 };

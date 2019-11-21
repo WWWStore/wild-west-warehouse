@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import base64 from 'base-64';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../authContext';
-import Footer from './footer';
+import Footer from './fixed-footer';
 
 const superagent = require('superagent');
 require('cors');

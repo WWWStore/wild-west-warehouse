@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../authContext';
-import Footer from './footer';
+import Footer from './fixed-footer';
 
 require('../styles/login.scss');
 const superagent = require('superagent');

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import superagent from 'superagent';
 import { AuthContext } from '../authContext';
+import Footer from './fixed-footer';
 
 import '../styles/product-details.scss'
 
@@ -54,6 +55,7 @@ export default function Details(props) {
         <input type="number" defaultValue={quantity} min={1} max={15} onChange={quantityChange}></input>
         <button onClick={addToWagon}>Add to your Wagon</button>
       </div>
+      <Footer />
     </>
   )
 };

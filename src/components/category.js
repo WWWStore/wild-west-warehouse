@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import superagent from 'superagent';
+import Footer from './fixed-footer';
 
 import '../styles/products-list.scss';
 
@@ -39,6 +40,7 @@ export default function Category(props) {
           ))
         }
       </ul>
+      <Footer />
     </>
   )
 };
