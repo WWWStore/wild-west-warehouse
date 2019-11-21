@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/categories-list.scss';
 
 export default function CategoriesList() {
+  const [isActive, setIsActive] = useState(false);
+  let classString = isActive ? "categories-list active" : "categories-list"
+
+  const handleListClick = () => {
+    setIsActive(true);
+  }
+
+  const handleClick = useCallback(event => {
+    console.log('click')
+    if (document.getElementsByClassName('categories-list')[0].classList.contains('active')) {
+      document.getElementsByClassName('categories-list')[0].classList.remove('active');
+      setIsActive(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isActive) {
+      window.addEventListener('click', handleClick);
+      return () => {
+        window.removeEventListener('click', handleClick);
+      }
+    }
+  });
+
   return (
-    <ul className="categories-list">
+    <ul className={classString} onClick={handleListClick}>
       Select Category
       <li><Link to='/products'>All Products</Link></li>
       <li><Link to='/categories/beverages'>Beverages</Link></li>
