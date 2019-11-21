@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BestSellers from './best-sellers';
 import Recent from './recent';
 import CategoriesList from './categories-list';

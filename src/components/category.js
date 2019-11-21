@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import superagent from 'superagent';
 
 import '../styles/products-list.scss';
 
 export default function Category(props) {
   let [products, setProducts] = useState(null)
-  console.log(products)
   const { slug } = props.match.params;
 
   useEffect(() => {
@@ -31,11 +31,11 @@ export default function Category(props) {
       <ul className="products-list">
         {
           products.map(product => (
-            <a href={`/products/${product._id}`}><li key={product._id}>
+            <li key={product._id}><Link to={`/products/${product._id}`}>
               <h4 className="product-name">{product.name}</h4>
-              <img className="product-image" src={product.image_url}/>
+              <img className="product-image" src={product.image_url} alt={product.name}/>
               <h5 className="product-price">${product.price}</h5>
-            </li></a>
+            </Link></li>
           ))
         }
       </ul>
