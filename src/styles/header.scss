@@ -1,11 +1,23 @@
 .header {
   * {
     box-sizing: border-box;
+    color: whitesmoke;
+  }
+  .userandlogo {
+    * {
+      display: inline-block;
+    }
+    .username-display {
+      font-size: 1.3rem;
+      align-self: center;
+      margin-left: 15px;
+    }
+    display: flex;
   }
   li {
     a {
       text-decoration: none;
-      color: white;
+      color: whitesmoke;
       border: 1px solid rgba(75, 75, 75, .4);
       padding: 3px 16px 3px 16px;
       background-color: rgba(75, 75, 75, .2);
@@ -35,8 +47,8 @@
 
 .www-logo {
   margin-top: 15px;
-  width: 175px;
-  height: 100px;
+  width: 150px;
+  height: 75px;
   margin-left: 20px;
 }
 
