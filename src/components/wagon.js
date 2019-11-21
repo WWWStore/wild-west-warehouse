@@ -40,19 +40,19 @@ export default function Wagon() {
   return (
     <>
       <h2>Wagon</h2>
-      <ul>
+      <ul className="product-list">
         {
           wagon.map(wagonItem => {
             if(wagonItem.quantity && wagonItem.quantity !== 0) {
               return (
                 <li className="wagon-product" key={wagonItem._id}>
-                  <h3 className="wagon-product name">{wagonItem.product.name}</h3>
-                  <h4 className="wagon-product price">${wagonItem.product.price}</h4>
-                  <img className="wagon-product image" src={wagonItem.product.image_url} width={200} alt={wagonItem.product.name}/>
-                  <p className="wagon-product description">{wagonItem.product.description}</p>
-                  <p className="wagon-product quantity">Quantity: {wagonItem.quantity}</p>
-                  <h6 className="wagon-product keywords">Keywords: {wagonItem.product.keywords}</h6>
-                  <button className="wagon-product delete" name="deleteProduct" onClick={() => deleteProduct(wagonItem.product._id)}>Delete</button>
+                  <img className="wagon-product image" src={wagonItem.product.image_url} alt={wagonItem.product.name}/>
+                  <div className="wagon-product full-details">
+                    <h3 className="wagon-product name">{wagonItem.product.name}</h3>
+                    <h4 className="wagon-product price">${wagonItem.product.price}</h4>
+                    <p className="wagon-product quantity">Quantity: {wagonItem.quantity}</p>
+                    <button className="wagon-product delete" name="deleteProduct" onClick={() => deleteProduct(wagonItem.product._id)}>Delete</button>
+                  </div>
                 </li>
               )
             }
