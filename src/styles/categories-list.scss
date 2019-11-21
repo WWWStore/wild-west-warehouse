@@ -1,9 +1,9 @@
 .categories-list {
+  position: fixed;
   li {
     a {
       text-decoration: none;
       color: black;
-      font-size: 1.9rem;
     }
     display: none;
     width: 100%;
@@ -12,11 +12,15 @@
     color: rgba(75, 75, 75, .7);
     background-color: rgba(75, 75, 75, .3);
   }
-  font-size: 2.1rem;
+  width: 200px;
   background-color: #c3976a;
   transition: display 2s ease-in;
 }
 .categories-list:hover {
+  cursor: pointer;
+}
+
+.active {
   li {
     display: block;
   }
