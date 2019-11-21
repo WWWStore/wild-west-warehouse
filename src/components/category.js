@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import superagent from 'superagent';
 
 import '../styles/products-list.scss';
@@ -30,11 +31,11 @@ export default function Category(props) {
       <ul className="products-list">
         {
           products.map(product => (
-            <li key={product._id}><a href={`/products/${product._id}`}>
+            <li key={product._id}><Link to={`/product/${product._id}`}>
               <h4 className="product-name">{product.name}</h4>
-              <img className="product-image" src={product.image_url}/>
+              <img className="product-image" src={product.image_url} alt={product.name}/>
               <h5 className="product-price">${product.price}</h5>
-            </a></li>
+            </Link></li>
           ))
         }
       </ul>
