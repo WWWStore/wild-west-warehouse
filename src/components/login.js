@@ -14,6 +14,7 @@ export default function Login() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    e.target.reset();
     superagent.get('https://wwwshop.herokuapp.com/signin')
       .set('authorization', `Basic ${base64.encode(`${username}:${password}`)}`)
       .then(res => {
@@ -37,7 +38,7 @@ export default function Login() {
         <input type="text" onChange={handleUsernameChange}></input>
 
         <label>Password</label>
-        <input type="text" onChange={handlePasswordChange}></input>
+        <input type="password" onChange={handlePasswordChange}></input>
         <div className="submitbutton">
         <input type="submit" value="Submit"></input></div>
       </form>
