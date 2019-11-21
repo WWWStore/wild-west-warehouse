@@ -31,7 +31,7 @@ export default function Category(props) {
       <ul className="products-list">
         {
           products.map(product => (
-            <li key={product._id}><Link to={`/product/${product._id}`}>
+            <li key={product._id}><Link to={`/products/${product._id}`}>
               <h4 className="product-name">{product.name}</h4>
               <img className="product-image" src={product.image_url} alt={product.name}/>
               <h5 className="product-price">${product.price}</h5>
