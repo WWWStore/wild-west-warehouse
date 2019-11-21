@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+//import { useCookies } from 'react-cookie';
 import Carousel from './carousel';
 import BestSellers from './best-sellers';
 import Recent from './recent';
