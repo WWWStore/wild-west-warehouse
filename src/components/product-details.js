@@ -34,11 +34,31 @@ export default function Details(props) {
     }
   }
 
+  const updateRecentlyViewed = (data) => {
+    let recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed'));
+    if(!recentlyViewed) {
+      let items = []
+      items.push(data);
+      localStorage.setItem('recentlyViewed', JSON.stringify(items));
+    } else {
+      for(let i = 0; i < recentlyViewed.length; i++) {
+        if(recentlyViewed[i]._id === data._id) {
+          return;
+        } else {
+          continue;
+        }
+      }
+      recentlyViewed.push(data);
+      localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+    }
+  }
+
   useEffect(() => {
     superagent
       .get(`https://wwwshop.herokuapp.com/products/${id}`)
       .then(res => {
         setDetails(res.body);
+        updateRecentlyViewed(res.body);
       })
   }, [id])
 
