@@ -33,7 +33,6 @@ export default function Main(props) {
           } />
         </Switch>
       </main>
-      <Footer />
     </>
   )
 };

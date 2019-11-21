@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../authContext';
+import Footer from './footer';
 
 require('../styles/login.scss');
 const superagent = require('superagent');
@@ -77,6 +78,7 @@ export default function Signup() {
     <p>{authenticatedUser.username}</p>
     <div className="signup">
     <p>Already have an account?</p><Link to="/login">Log in</Link></div>
+    <Footer />
     </>
   )
 };

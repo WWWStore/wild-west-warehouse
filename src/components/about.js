@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Footer from './footer';
 import '../styles/about.scss';
 
 export default function About() {
@@ -14,6 +14,7 @@ export default function About() {
       <li><img src="https://via.placeholder.com/250x250.jpg" alt="Steven"/> Steven Jones </li></div>
       </ul>
     </section>
+    <Footer />
     </>
   )
 };
