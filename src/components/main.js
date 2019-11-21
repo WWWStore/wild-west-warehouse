@@ -11,8 +11,6 @@ import About from './about';
 import Wagon from './wagon';
 import ProductDetails from './product-details';
 
-import '../styles/main.scss';
-
 export default function Main(props) {
   return (
     <>
