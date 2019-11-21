@@ -27,7 +27,8 @@ export default function Header() {
     }
   })
 
-
+  let regex = /^NONUSER-/
+  let displayUser = regex.test(authenticatedUser.username) ? 'Guest' : authenticatedUser.username;
 
   if(screenWidth > 768) {
     return (
@@ -36,7 +37,7 @@ export default function Header() {
           <Link to="/">
             <img className="www-logo" src={require('../assets/wwwlogo.png')} alt="Home Logo"/>
           </Link>
-          <p className="username-display">Howdy, {authenticatedUser.username}!</p>
+          <p className="username-display">Howdy, {displayUser}!</p>
         </div>
         <ul className="header-nav">
           <li><Link to="/about">About</Link></li>
@@ -51,7 +52,7 @@ export default function Header() {
       <header className="header">
       <Link to="/"><img className="www-logo"
           src={require('../assets/wwwlogo.png')} alt="Home Logo"></img></Link>
-          <p className="username-display">Howdy, {authenticatedUser.username}!</p>
+          <p className="username-display">Howdy, {displayUser}!</p>
         <ul className="header-nav">
           <li><Link to="/wagon"><img className="cart-logo" src={require('../assets/wagonicon.png')} alt="Wagon Logo"/></Link></li>
           <li><img className="hamburger" src={require('../assets/menu-alt-512.png')} alt="Hamburger" onClick={() => {handleMenuClick()}}/></li>

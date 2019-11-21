@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import superagent from 'superagent';
 import { AuthContext } from '../authContext';
 import Footer from './fixed-footer';
+import CategoriesList from './categories-list';
 
 import '../styles/product-details.scss'
-
 
 export default function Details(props) {
 
@@ -77,6 +77,7 @@ export default function Details(props) {
 
   return (
     <>
+      <CategoriesList />
       <div className="details">
         <h3>{details.name}</h3>
         <p>{details.description}</p>
