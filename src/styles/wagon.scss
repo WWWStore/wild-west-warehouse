@@ -12,40 +12,39 @@ h2 {
 }
 
 .product-list {
-  display: block;
-  background-color: rgba(75, 75, 75, .3);
-}
-
-ul {
   li {
-    .wagon-product {
-      padding-right: 15px;
-    }
-    .name {
-      font-size: 1.6rem;
-    }
-    .price {
-      font-size: 1rem;
-    }
-    .image {
-      height: 200px;
-      float: left;
-    }
-    .quantity {
-      font-weight: bold;
-    }
-    .delete {
-      font-size: 1.2rem;
-      color: blue;
-      background: transparent;
-      border: none;
-      text-decoration: underline;
-    }
-    .delete:hover {
-      color: darkslateblue;
-    }
     .full-details {
-      float: right;
+      .wagon-product {
+        padding-right: 15px;
+      }
+      .name {
+        font-size: 1.6rem;
+      }
+      .price {
+        font-size: 1rem;
+      }
+      .image {
+        height: 200px;
+        float: left;
+      }
+      .quantity {
+        font-weight: bold;
+      }
+      .delete {
+        font-size: 1.2rem;
+        color: blue;
+        background: transparent;
+        border: none;
+        text-decoration: underline;
+      }
+      .delete:hover {
+        color: darkslateblue;
+      }
+      .text-details {
+        float: right;
+      }
+      background-color: rgba(75, 75, 75, .3);
+      width: 100%;
     }
   }
   max-width: 20%;

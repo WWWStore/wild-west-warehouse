@@ -46,12 +46,14 @@ export default function Wagon() {
             if(wagonItem.quantity && wagonItem.quantity !== 0) {
               return (
                 <li className="wagon-product" key={wagonItem._id}>
-                  <img className="wagon-product image" src={wagonItem.product.image_url} alt={wagonItem.product.name}/>
-                  <div className="wagon-product full-details">
-                    <h3 className="wagon-product name">{wagonItem.product.name}</h3>
-                    <h4 className="wagon-product price">${wagonItem.product.price}</h4>
-                    <p className="wagon-product quantity">Quantity: {wagonItem.quantity}</p>
-                    <button className="wagon-product delete" name="deleteProduct" onClick={() => deleteProduct(wagonItem.product._id)}>Delete</button>
+                  <div className="full-details">
+                    <img className="wagon-product image" src={wagonItem.product.image_url} alt={wagonItem.product.name}/>
+                    <div className="wagon-product text-details">
+                      <h3 className="wagon-product name">{wagonItem.product.name}</h3>
+                      <h4 className="wagon-product price">${wagonItem.product.price}</h4>
+                      <p className="wagon-product quantity">Quantity: {wagonItem.quantity}</p>
+                      <button className="wagon-product delete" name="deleteProduct" onClick={() => deleteProduct(wagonItem.product._id)}>Delete</button>
+                    </div>
                   </div>
                 </li>
               )
