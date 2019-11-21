@@ -1,11 +1,21 @@
 .header {
   * {
     box-sizing: border-box;
+    color: whitesmoke;
+  }
+  .userandlogo {
+    * {
+      display: inline-block;
+    }
+    .username-display {
+      font-size: 1.3rem;
+      align-self: center;
+    }
   }
   li {
     a {
       text-decoration: none;
-      color: black;
+      color: whitesmoke;
       border: 1px solid rgba(75, 75, 75, .4);
       padding: 3px 16px 3px 16px;
       background-color: rgba(75, 75, 75, .2);
