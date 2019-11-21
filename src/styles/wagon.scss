@@ -1,51 +1,46 @@
-.wagon {
-  border: 1px solid black;
-  padding: 20px 0;
-  width: 200px;
-  margin: 100px auto;
-  display: flex;
-  justify-content: center;
-}
-
 h2 {
   font-size: 3rem;
 }
 
 .product-list {
-  li {
-    .full-details {
-      .wagon-product {
-        padding-right: 15px;
-      }
-      .name {
-        font-size: 1.6rem;
-      }
-      .price {
-        font-size: 1rem;
-      }
-      .image {
-        height: 200px;
-        float: left;
-      }
-      .quantity {
-        font-weight: bold;
-      }
-      .delete {
-        font-size: 1.2rem;
-        color: blue;
-        background: transparent;
-        border: none;
-        text-decoration: underline;
-      }
-      .delete:hover {
-        color: darkslateblue;
-      }
-      .text-details {
-        float: right;
-      }
-      background-color: rgba(75, 75, 75, .3);
-      width: 100%;
+  .full-details {
+    .name {
+      font-size: 1.6rem;
     }
+    .price {
+      font-size: 1rem;
+    }
+    .image {
+      height: 200px;
+      float: left;
+      border-radius: 10px;
+    }
+    .quantity {
+      font-weight: bold;
+    }
+    .delete {
+      font-size: 1.2rem;
+      color: blue;
+      background: transparent;
+      border: none;
+      text-decoration: underline;
+    }
+    .delete:hover {
+      color: darkslateblue;
+    }
+    .text-details {
+      margin: auto;
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    background-color: rgba(75, 75, 75, .3);
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(75, 75, 75, .6);
+    border-radius: 15px;
   }
   max-width: 20%;
   min-width: 600px;
