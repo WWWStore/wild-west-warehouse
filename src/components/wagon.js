@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import superagent from 'superagent';
-
+import Footer from './fixed-footer';
 import '../styles/wagon.scss';
 
 
@@ -19,6 +19,7 @@ export default function Wagon() {
     return (
       <>
         Wagon...
+        <Footer />
       </>
     )
   }
@@ -31,7 +32,7 @@ export default function Wagon() {
       <p>{wagon.description}</p>
       <p>{wagon.quantity}</p>
       <h6>Keywords: {wagon.keywords.toString()}</h6>
-
+      <Footer />
     </> 
   )
 };

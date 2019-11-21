@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import base64 from 'base-64';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../authContext';
+import Footer from './footer';
 
 const superagent = require('superagent');
 require('cors');
@@ -47,6 +48,7 @@ export default function Login() {
     <p>Don't have an account?</p><Link to="/signup">Sign up</Link>
     </div>
     <p>{ authenticatedUser.username }</p>
+    <Footer />
     </>
   )
 };
