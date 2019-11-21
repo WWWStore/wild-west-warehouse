@@ -5,7 +5,6 @@ import '../styles/products-list.scss';
 
 export default function Category(props) {
   let [products, setProducts] = useState(null)
-  console.log(products)
   const { slug } = props.match.params;
 
   useEffect(() => {
@@ -31,11 +30,11 @@ export default function Category(props) {
       <ul className="products-list">
         {
           products.map(product => (
-            <a href={`/products/${product._id}`}><li key={product._id}>
+            <li key={product._id}><a href={`/products/${product._id}`}>
               <h4 className="product-name">{product.name}</h4>
               <img className="product-image" src={product.image_url}/>
               <h5 className="product-price">${product.price}</h5>
-            </li></a>
+            </a></li>
           ))
         }
       </ul>
