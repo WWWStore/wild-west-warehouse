@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './footer';
+import Footer from './fixed-footer';
 import '../styles/about.scss';
 
 export default function About() {

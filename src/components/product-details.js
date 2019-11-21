@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import superagent from 'superagent';
 import { AuthContext } from '../authContext';
+import Footer from './fixed-footer';
 
 import '../styles/product-details.scss'
 
@@ -12,15 +13,26 @@ export default function Details(props) {
   let [quantity, setQuantity] = useState(1);
   const authenticatedUser = useContext(AuthContext);
   
-  const addToWagon = () => (
-    superagent
-      .post(`https://wwwshop.herokuapp.com/products/${details._id}/save`)
-      .set('authorization', `Bearer ${authenticatedUser.token}`)
-      .send({ quantity: quantity })
-      .then(res => {
-        console.log(res.body);
-      })
-    )
+  const addToWagon = () => {
+    if(authenticatedUser.username === 'Guest') {
+      superagent
+        .post(`https://wwwshop.herokuapp.com/products/${details._id}/save`)
+        .send({ quantity: quantity })
+        .then(res => {
+          authenticatedUser.changeUser(res.headers.token);
+          props.history.push('/wagon');
+        })
+    } else {
+      superagent
+        .post(`https://wwwshop.herokuapp.com/products/${details._id}/save`)
+        .set('authorization', `Bearer ${authenticatedUser.token}`)
+        .send({ quantity: quantity })
+        .then(res => {
+          console.log(res.body);
+          props.history.push('/wagon');
+        })
+    }
+  }
 
   useEffect(() => {
     superagent
@@ -54,6 +66,7 @@ export default function Details(props) {
         <input type="number" defaultValue={quantity} min={1} max={15} onChange={quantityChange}></input>
         <button onClick={addToWagon}>Add to your Wagon</button>
       </div>
+      <Footer />
     </>
   )
 };

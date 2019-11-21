@@ -9,7 +9,6 @@ import Login from './login';
 import Signup from './signup';
 import About from './about';
 import Wagon from './wagon';
-import Footer from './footer';
 import ProductDetails from './product-details';
 
 import '../styles/main.scss';

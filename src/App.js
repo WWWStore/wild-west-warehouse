@@ -6,12 +6,11 @@ import { useCookies } from 'react-cookie';
 //import { CookiesProvider } from 'react-cookie';
 
 const jwt = require('jsonwebtoken');
-const secret = 'beskar\'gam';
 
 function App() {
   const updateAuthenticatedUser = (token) => {
     console.log(token);
-    let decoded = jwt.verify(token, secret);
+    let decoded = jwt.decode(token);
     setCookie('token', token);
     setUsername(decoded.username);
     setToken(token)
@@ -25,7 +24,7 @@ function App() {
 
   if(cookies.token) {
     authenticatedUser = {
-      username: jwt.verify(cookies.token, secret).username,
+      username: jwt.decode(cookies.token).username,
       token: cookies.token,
       changeUser: updateAuthenticatedUser
     }
