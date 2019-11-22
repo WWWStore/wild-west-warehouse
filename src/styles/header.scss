@@ -18,10 +18,11 @@
     a {
       text-decoration: none;
       color: whitesmoke;
-      border: 1px solid rgba(75, 75, 75, .4);
       padding: 3px 16px 3px 16px;
-      background-color: rgba(75, 75, 75, .2);
       border-radius: 5px;
+    }
+    .border {
+      background-color: rgba(75, 75, 75, .2);
     }
   }
   li:last-of-type {
@@ -46,10 +47,10 @@
 }
 
 .www-logo {
-  margin-top: 15px;
-  width: 150px;
-  height: 75px;
-  margin-left: 20px;
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .cart-logo {
@@ -78,4 +79,8 @@
 
 .hidden {
   display: none;
+}
+
+.mobile-wagon {
+  background-color: rgba(75, 75, 75, 0);
 }
