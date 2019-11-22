@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import superagent from 'superagent';
 import { AuthContext } from '../authContext';
 import Footer from './fixed-footer';
+import CategoriesList from './categories-list';
 
 import '../styles/product-details.scss'
-
 
 export default function Details(props) {
 
@@ -77,13 +77,14 @@ export default function Details(props) {
 
   return (
     <>
+      <CategoriesList />
       <div className="details">
         <h3>{details.name}</h3>
         <p>{details.description}</p>
         <img src={details.image_url} width={200} alt={details.name}/>
         <h4>${details.price}</h4>
         <h6>Keywords: {details.keywords.toString()}</h6>
-        <input type="number" defaultValue={quantity} min={1} max={15} onChange={quantityChange}></input>
+        <input type="number" placeholder="Quantity?" min={1} max={15} onChange={quantityChange}></input>
         <button onClick={addToWagon}>Add to your Wagon</button>
       </div>
       <Footer />
