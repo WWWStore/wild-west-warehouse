@@ -1,0 +1,17 @@
+.dropdown {
+  position: absolute;
+  width: 150px;
+  right: 0;
+  list-style-type: none;
+  background-color:  rgba(75, 75, 75, 1);
+}
+
+.dropdown a {
+  text-decoration: none;
+}
+
+.dropdown li {
+  padding-left: 15px; 
+  width: 100%;
+  color: white;
+}
