@@ -7,11 +7,11 @@ export default function About() {
     <>
     <section className="about"><h2>About Us</h2>
       <ul><div>
-      <li><img src="https://via.placeholder.com/250x250.jpg" alt="Andy"/> Andy Fiedler </li>
-      <li><img src="https://via.placeholder.com/250x250.jpg" alt="Ian"/> Ian Smith </li></div>
+      <li><img src={require('../assets/andy.png')} alt="Andy"/> Andy Fiedler </li>
+      <li><img src={require('../assets/Ian.png')}  alt="Ian"/> Ian Smith </li></div>
       <div>
-      <li><img src="https://via.placeholder.com/250x250.jpg" alt="Jon"/> Jon Struve </li>
-      <li><img src="https://via.placeholder.com/250x250.jpg" alt="Steven"/> Steven Jones </li></div>
+      <li><img src={require('../assets/jon.png')}  alt="Jon"/> Jon Struve </li>
+      <li><img src={require('../assets/steven.png')}  alt="Steven"/> Steven Jones </li></div>
       </ul>
     </section>
     <Footer />
