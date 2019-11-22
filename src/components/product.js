@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import superagent from 'superagent';
 import Footer from './footer';
+import CategoriesList from './categories-list';
 
 import '../styles/products-list.scss';
 
@@ -26,6 +27,7 @@ export default function Product(props) {
 
   return (
     <>
+      <CategoriesList />
       <ul className="products-list">
         {
           products.map(product => (
