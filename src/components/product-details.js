@@ -37,7 +37,7 @@ export default function Details(props) {
   const updateRecentlyViewed = (data) => {
     let recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed'));
     if(!recentlyViewed) {
-      let items = []
+      let items = [];
       items.push(data);
       localStorage.setItem('recentlyViewed', JSON.stringify(items));
     } else {
