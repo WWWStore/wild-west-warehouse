@@ -5,6 +5,8 @@ import '../styles/recentlyViewed.scss';
 export default function RecentlyViewed() {
   if(localStorage.getItem('recentlyViewed')) {
     return (
+      <div className="recent-container">
+      <h3>Recently Viewed</h3>
       <ul className="recentlyViewed">
         {JSON.parse(localStorage.getItem('recentlyViewed')).map(product => (
           <li key={product._id}><Link to={`/products/${product._id}`}>
@@ -14,6 +16,7 @@ export default function RecentlyViewed() {
         </Link></li>
       ))}
       </ul>
+      </div>
     )
   } else {
     return null;

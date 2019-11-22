@@ -1,5 +1,6 @@
 .categories-list {
-  position: fixed;
+  position: absolute;
+  top: 102px;
   a {
     color: black;
     display: none;
@@ -10,6 +11,7 @@
     color: rgba(75, 75, 75, .7);
     background-color: rgba(75, 75, 75, .3);
   }
+  padding-left: 15px;
   width: 200px;
   background-color: #c3976a;
   transition: display 2s ease-in;
