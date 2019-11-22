@@ -1,14 +1,12 @@
 .categories-list {
   position: fixed;
-  li {
-    a {
-      text-decoration: none;
-      color: black;
-    }
+  a {
+    color: black;
     display: none;
     width: 100%;
+    text-decoration: none;
   }
-  li:hover {
+  a:hover {
     color: rgba(75, 75, 75, .7);
     background-color: rgba(75, 75, 75, .3);
   }
@@ -21,7 +19,7 @@
 }
 
 .active {
-  li {
+  a {
     display: block;
   }
 }
