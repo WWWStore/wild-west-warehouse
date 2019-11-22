@@ -16,7 +16,7 @@ export default function Signup() {
   const authenticatedUser = useContext(AuthContext);
 
   const handleSubmit = (e) => {
-    if(passwordDoesMatch) {
+    if(!!passwordDoesMatch) {
       e.preventDefault();
       e.target.reset();
       superagent.post('https://wwwshop.herokuapp.com/signup')
@@ -29,6 +29,7 @@ export default function Signup() {
           setLoginWasSuccessful(true);
         })
     } else {
+      e.preventDefault();
       alert('Password fields must match');
     }
     
@@ -42,10 +43,8 @@ export default function Signup() {
     setPassword(e.target.value);
     if(e.target.value === confirmPassword && password) {
       setPasswordDoesMatch(true);
-      document.getElementById('submit').removeAttribute('disabled');
     } else {
-      let flag=document.createAttribute("disabled");
-      document.getElementById('submit').setAttributeNode(flag);
+      setPasswordDoesMatch(false);
     }
   }
 
@@ -53,11 +52,8 @@ export default function Signup() {
     setConfirmPassword(e.target.value);
     if(e.target.value === password) {
       setPasswordDoesMatch(true);
-      document.getElementById('submit').removeAttribute('disabled');
     } else {
       setPasswordDoesMatch(false);
-      let flag=document.createAttribute("disabled");
-      document.getElementById('submit').setAttributeNode(flag);
     }
   }
 
@@ -77,10 +73,9 @@ export default function Signup() {
           <label>Confirm Password</label>
           <input type="password" onChange={handleConfirmPasswordChange}></input>
           <div className="submitbutton">
-          <input type="submit" value="Submit" disabled id="submit"></input></div>
+          <input type="submit" value="Submit" id="submit"></input></div>
         </form>
       </div>
-      <p>{authenticatedUser.username}</p>
       <div className="signup">
       <p>Already have an account?</p><Link to="/login">Log in</Link></div>
       <Footer />

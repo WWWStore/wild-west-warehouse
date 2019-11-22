@@ -31,17 +31,17 @@ export default function CategoriesList() {
   return (
     <ul className={classString} onClick={handleListClick}>
       Select Category
-      <li><Link to='/products'>All Products</Link></li>
-      <li><Link to='/categories/beverages'>Beverages</Link></li>
-      <li><Link to='/categories/firearms'>Firearms</Link></li>
-      <li><Link to='/categories/beans'>Beans</Link></li>
-      <li><Link to='/categories/explosives'>Explosives</Link></li>
-      <li><Link to='/categories/accessories'>Accessories</Link></li>
-      <li><Link to='/categories/saddles'>Saddles</Link></li>
-      <li><Link to='/categories/horses'>Horses</Link></li>
-      <li><Link to='/categories/clothing'>Clothing</Link></li>
-      <li><Link to='/categories/boots'>Boots</Link></li>
-      <li><Link to='/categories/hats'>Hats</Link></li>
+      <Link to='/products'><li>All Products</li></Link>
+      <Link to='/categories/beverages'><li>Beverages</li></Link>
+      <Link to='/categories/firearms'><li>Firearms</li></Link>
+      <Link to='/categories/beans'><li>Beans</li></Link>
+      <Link to='/categories/explosives'><li>Explosives</li></Link>
+      <Link to='/categories/accessories'><li>Accessories</li></Link>
+      <Link to='/categories/saddles'><li>Saddles</li></Link>
+      <Link to='/categories/horses'><li>Horses</li></Link>
+      <Link to='/categories/clothing'><li>Clothing</li></Link>
+      <Link to='/categories/boots'><li>Boots</li></Link>
+      <Link to='/categories/hats'><li>Hats</li></Link>
     </ul>
   )
 };
